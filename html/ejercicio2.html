@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <script src="..//Js/ejercicio2.js"></script>
+</head>
+<body>
+    <h1>Registro de Estudiantes</h1>
+    
+    <section>
+        <h2>Agregar Estudiante</h2>
+        Nombre: <input type="text" id="nombre"><br>
+        Edad: <input type="number" id="edad"><br>
+        Número de Identificación: <input type="text" id="id"><br>
+        <button onclick="registrarEstudianteDesdeFormulario()">Registrar Estudiante</button>
+    </section>
+    
+    <section>
+        <h2>Buscar Estudiante</h2>
+        Número de Identificación: <input type="text" id="idBusqueda">
+        <button onclick="buscarEstudianteDesdeFormulario()">Buscar</button>
+        <p id="resultadoBusqueda"></p>
+    </section>
+
+</body>
+</html>
