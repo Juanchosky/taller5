@@ -5,11 +5,11 @@ function calcularEstadisticas(calificaciones) {
         };
     }
 
-    let suma = 0;
-    let calificacionMasAlta = Number.MIN_SAFE_INTEGER;
-    let calificacionMasBaja = Number.MAX_SAFE_INTEGER;
+    var suma = 0;
+    var calificacionMasAlta = Number.MIN_SAFE_INTEGER;
+    var calificacionMasBaja = Number.MAX_SAFE_INTEGER;
 
-    for (let calificacion of calificaciones) {
+    for (var calificacion of calificaciones) {
         suma += calificacion;
         if (calificacion > calificacionMasAlta) {
             calificacionMasAlta = calificacion;
@@ -19,7 +19,7 @@ function calcularEstadisticas(calificaciones) {
         }
     }
 
-    let promedio = suma / calificaciones.length;
+    var promedio = suma / calificaciones.length;
 
     return {
         promedio: parseFloat(promedio.toFixed(2)),
@@ -29,8 +29,8 @@ function calcularEstadisticas(calificaciones) {
 }
 
 function mostrarEstadisticas() {
-    let calificaciones = prompt("Introduce las calificaciones separadas por coma (,):");
+    var calificaciones = prompt("Introduce las calificaciones separadas por coma (,):");
     calificaciones = calificaciones.split(",").map(Number);
-    let resultado = calcularEstadisticas(calificaciones);
+    var resultado = calcularEstadisticas(calificaciones);
     alert(`Promedio: ${resultado.promedio}\nCalificación más alta: ${resultado.calificacionMasAlta}\nCalificación más baja: ${resultado.calificacionMasBaja}`);
 }

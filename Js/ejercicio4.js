@@ -1,12 +1,12 @@
 
 function generarTablaDeMultiplicar() {
    
-    const numeroSeleccionado = parseInt(document.getElementById("numeroSeleccionado").value);
+  var numeroSeleccionado = parseInt(document.getElementById("numeroSeleccionado").value);
   
    
-    const filasAMostrar = parseInt(document.getElementById("filasAMostrar").value);
+  var filasAMostrar = parseInt(document.getElementById("filasAMostrar").value);
   
-    const tablaResultado = document.getElementById("tablaResultado");
+  var tablaResultado = document.getElementById("tablaResultado");
   
     
     tablaResultado.innerHTML = "";
@@ -22,8 +22,8 @@ function generarTablaDeMultiplicar() {
     }
   
     for (let i = 1; i <= filasAMostrar; i++) {
-      const resultado = numeroSeleccionado * i;
-      const fila = document.createElement("p");
+      var resultado = numeroSeleccionado * i;
+      var fila = document.createElement("p");
       fila.textContent = `${numeroSeleccionado} x ${i} = ${resultado}`;
       tablaResultado.appendChild(fila);
     }

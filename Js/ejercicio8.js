@@ -1,10 +1,10 @@
 function generarContrasena(longitud, incluirMayusculas, incluirNumeros, incluirEspeciales) {
-  const caracteresMinusculas = 'abcdefghijklmnopqrstuvwxyz';
-  const caracteresMayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const numeros = '0123456789';
-  const especiales = '!@#$%^&*()-_=+[]{}|;:,.<>?';
+  var caracteresMinusculas = 'abcdefghijklmnopqrstuvwxyz';
+  var caracteresMayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var numeros = '0123456789';
+  var especiales = '!@#$%^&*()-_=+[]{}|;:,.<>?';
 
-  let conjuntoCaracteres = caracteresMinusculas;
+  varonjuntoCaracteres = caracteresMinusculas;
 
   if (incluirMayusculas) {
       conjuntoCaracteres += caracteresMayusculas;
@@ -18,7 +18,7 @@ function generarContrasena(longitud, incluirMayusculas, incluirNumeros, incluirE
       conjuntoCaracteres += especiales;
   }
 
-  let contrasena = '';
+  varontrasena = '';
   for (let i = 0; i < longitud; i++) {
       const indiceRandom = Math.floor(Math.random() * conjuntoCaracteres.length);
       contrasena += conjuntoCaracteres[indiceRandom];
@@ -28,11 +28,11 @@ function generarContrasena(longitud, incluirMayusculas, incluirNumeros, incluirE
 }
 
 function solicitarContrasena() {
-  const longitud = parseInt(prompt("Introduce la longitud de la contraseña:"));
-  const incluirMayusculas = confirm("¿Incluir mayúsculas?");
-  const incluirNumeros = confirm("¿Incluir números?");
-  const incluirEspeciales = confirm("¿Incluir caracteres especiales?");
+  var longitud = parseInt(prompt("Introduce la longitud de la contraseña:"));
+  var incluirMayusculas = confirm("¿Incluir mayúsculas?");
+  var incluirNumeros = confirm("¿Incluir números?");
+  var incluirEspeciales = confirm("¿Incluir caracteres especiales?");
 
-  const contrasena = generarContrasena(longitud, incluirMayusculas, incluirNumeros, incluirEspeciales);
+  var contrasena = generarContrasena(longitud, incluirMayusculas, incluirNumeros, incluirEspeciales);
   alert(`Tu contraseña generada es: ${contrasena}`);
 }

@@ -1,14 +1,14 @@
 
-const bookDatabase = [];
+var bookDatabase = [];
 
 
 function agregarLibro() {
-  const titulo = prompt("Ingrese el título del libro:");
-  const autor = prompt("Ingrese el autor del libro:");
-  const añoPublicacion = prompt("Ingrese el año de publicación del libro:");
+  var titulo = prompt("Ingrese el título del libro:");
+  var autor = prompt("Ingrese el autor del libro:");
+  var añoPublicacion = prompt("Ingrese el año de publicación del libro:");
 
 
-  const libro = {
+  var libro = {
     titulo: titulo,
     autor: autor,
     añoPublicacion: añoPublicacion,
@@ -22,10 +22,10 @@ function agregarLibro() {
 
 
 function buscarLibroPorTitulo() {
-  const tituloBuscado = prompt("Ingrese el título del libro a buscar:");
+  var tituloBuscado = prompt("Ingrese el título del libro a buscar:");
 
 
-  const librosEncontrados = bookDatabase.filter((libro) =>
+  var librosEncontrados = bookDatabase.filter((libro) =>
     libro.titulo.toLowerCase() === tituloBuscado.toLowerCase()
   );
 
@@ -41,10 +41,10 @@ function buscarLibroPorTitulo() {
 
 
 function buscarLibroPorAutor() {
-  const autorBuscado = prompt("Ingrese el autor del libro a buscar:");
+  var autorBuscado = prompt("Ingrese el autor del libro a buscar:");
 
  
-  const librosEncontrados = bookDatabase.filter((libro) =>
+  var librosEncontrados = bookDatabase.filter((libro) =>
     libro.autor.toLowerCase() === autorBuscado.toLowerCase()
   );
 

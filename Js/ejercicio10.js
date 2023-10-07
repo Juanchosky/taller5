@@ -1,5 +1,5 @@
 function calcularIMC(peso, altura) {
-    const imc = peso / (altura * altura);
+    var imc = peso / (altura * altura);
     return parseFloat(imc.toFixed(2));
 }
 
@@ -16,9 +16,9 @@ function determinarCategoria(imc) {
 }
 
 function mostrarIMC() {
-    const peso = parseFloat(prompt("Introduce tu peso en kg:"));
-    const altura = parseFloat(prompt("Introduce tu altura en metros:"));
-    const imc = calcularIMC(peso, altura);
-    const categoria = determinarCategoria(imc);
+    var peso = parseFloat(prompt("Introduce tu peso en kg:"));
+    var altura = parseFloat(prompt("Introduce tu altura en metros:"));
+    var imc = calcularIMC(peso, altura);
+    var categoria = determinarCategoria(imc);
     alert(`Tu IMC es ${imc}, estás en el rango de ${categoria}.`);
 }

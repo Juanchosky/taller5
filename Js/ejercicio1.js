@@ -1,8 +1,8 @@
-let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-let intentos = 0;
+var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+var intentos = 0;
 
 function verificarNumero() {
-    const numeroUsuario = parseInt(document.getElementById("numeroUsuario").value);
+    var numeroUsuario = parseInt(document.getElementById("numeroUsuario").value);
     intentos++;
 
     if (numeroUsuario < numeroAleatorio) {

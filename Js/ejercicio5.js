@@ -1,4 +1,4 @@
-const questions = [
+var questions = [
     {
       question: "¿Cuál es la capital de Francia?",
       answer: "París"
@@ -11,10 +11,10 @@ const questions = [
   
 
   function iniciarJuego() {
-    let puntaje = 0;
+    var puntaje = 0;
   
-    for (let i = 0; i < questions.length; i++) {
-      const respuestaUsuario = prompt(questions[i].question);
+    for (var i = 0; i < questions.length; i++) {
+      var respuestaUsuario = prompt(questions[i].question);
   
       if (respuestaUsuario.toLowerCase() === questions[i].answer.toLowerCase()) {
         alert("¡Respuesta correcta!");
@@ -29,7 +29,7 @@ const questions = [
   
 
   function mostrarPuntuacion(puntaje, totalPreguntas) {
-    const resultado = `Puntuación: ${puntaje} de ${totalPreguntas} respuestas correctas`;
+    var resultado = `Puntuación: ${puntaje} de ${totalPreguntas} respuestas correctas`;
     alert(resultado);
   }
   
